@@ -1,0 +1,17 @@
+use-grammars = { except = [ "yaml", "json" ] }
+
+[[language]]
+name = "ruby"
+file-types = ["cr", "rb"]
+# config = { solargraph = { diagnostics = true, formatting = true } }
+
+[[language]]
+name = "crystal"
+scope = "source.cr"
+file-types = ["cr"]
+roots = ["shard.yml", "shard.lock"]
+comment-token = "#"
+indent = { tab-width = 2, unit = "  " }
+grammar = "ruby"
+language-server = { command = "crystalline" }
+

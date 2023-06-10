@@ -1,10 +1,61 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
-
+window:
+  # decorations: none
+  opacity: 0.94
 # Kanagawa Alacritty Colors
+# Kanagawa Alacritty Colors
+#
+# The definition of color schemes.
+# Apply the color scheme.
+# colors: *gruvbox_material_hard_dark
+
+# colors:
+#   primary:
+#     # background: "0x1f1f28"
+#     # background: "0xf9f5d7"
+#     # background: "0x1f1e1f"
+#     background: "0x000000"
+#     # background: "0x1d2021"
+#   # background: "0x0f1217"
+#   # background: "0xffffff"
+#   # background: "0x0f0a01"
+#   # foreground: "0xdcd7ba"
+#   normal:
+#     black: "0x090618"
+#     red: "0xc34043"
+#     green: "0x76946a"
+#     yellow: "0xc0a36e"
+#     blue: "0x7e9cd8"
+#     magenta: "0x957fb8"
+#     cyan: "0x6a9589"
+#     white: "0xc8c093"
+#   bright:
+#     black: "0x727169"
+#     red: "0xe82424"
+#     green: "0x98bb6c"
+#     yellow: "0xe6c384"
+#     blue: "0x7fb4ca"
+#     magenta: "0x938aa9"
+#     cyan: "0x7aa89f"
+#     white: "0xdcd7ba"
+#   selection:
+#     background: "0x2d4f67"
+#     foreground: "0xc8c093"
+
 # Kanagawa Alacritty Colors
 colors:
   primary:
-    background: "0x1f1f28"
+    # background: "0x1f1f28"
+    # background: "0x0d0b0d"
+    background: "0x0d1117"
+    # background: "0x282c34"
+    #
+    #
+    # background: "0x21242a"
+    # background: "0xffffff"
+    # background: "0x1f1f23"
+    # background: "0x000000"
+    # background: "0x1f1e2f"
     foreground: "0xdcd7ba"
 
   normal:
@@ -34,6 +85,9 @@ colors:
   indexed_colors:
     - { index: 16, color: "0xffa066" }
     - { index: 17, color: "0xff5d62" }
+# indexed_colors:
+# - { index: 16, color: "0xffa066" }
+# - { index: 17, color: "0xff5d62" }
 # colors:
 # primary:
 # background: "0x1f1f28"
@@ -88,9 +142,7 @@ env:
 # check the local terminfo database and use `alacritty` if it is
 # available, otherwise `xterm-256color` is used.
 
-window:
-  opacity: 0.94
-  # opacity: 1
+#opacity: 1
 # Window dimensions (changes require restart)
 #
 # Number of lines/columns (not pixels) in the terminal. Both lines and columns
@@ -129,7 +181,6 @@ window:
 # Values for `decorations` (macOS only):
 #     - transparent: Title bar, transparent background and title bar buttons
 #     - buttonless: Title bar, transparent background and no title bar buttons
-#decorations: full
 
 # Background opacity
 #
@@ -146,7 +197,7 @@ window:
 #
 # Values for `startup_mode` (macOS only):
 #   - SimpleFullscreen
-#startup_mode: Windowed
+startup_mode: Fullscreen
 
 # Window title
 #title: Alacritty
@@ -166,7 +217,7 @@ window:
 # Override the variant of the System theme/GTK theme/Wayland client side
 # decorations. Commonly supported values are `Dark`, `Light`, and `None` for
 # auto pick-up. Set this to `None` to use the default theme variant.
-#decorations_theme_variant: None
+decorations_theme_variant: None
 
 # Make `Option` key behave as `Alt` (macOS only):
 #   - OnlyLeft
@@ -183,21 +234,43 @@ window:
 # Scrolling distance multiplier.
 #multiplier: 3
 
-# Font configuration
 font:
-  size: 15.0
+  size: 13.5
   normal:
-    family: RobotoMono Nerd Font
-    style: Regular
-  bold:
-    family: RobotoMono Nerd Font
-    style: Regular
-  italic:
-    family: RobotoMono Nerd Font
-    style: Regular
-  bold_italic:
-    family: RobotoMono Nerd Font
-    style: Regular
+    family: JetBrainsMono Nerd Font
+    antialias: true
+    style: Medium
+  # bold:
+  #   family: RobotoMono Nerd Font
+  #   antialias: true
+  #   style: Bold
+  # italic:
+  #   family: RobotoMono Nerd Font
+  #   style: Medium
+  #   antialias: true
+  # bold_italic:
+  #   family: RobotoMono Nerd Font
+  #   antialias: true
+  #   style: Medium
+# Font configuration
+# font:
+#   size: 15.0
+#   normal:
+#     family: RobotoMono Nerd Font
+#     antialias: true
+#     style: Medium
+#   bold:
+#     family: RobotoMono Nerd Font
+#     antialias: true
+#     style: Bold
+#   italic:
+#     family: RobotoMono Nerd Font
+#     style: Medium
+#     antialias: true
+#   bold_italic:
+#     family: RobotoMono Nerd Font
+#     antialias: true
+#     style: Medium
 # The `style` can be specified to pick a specific face.
 #style: Regular
 
@@ -477,7 +550,7 @@ font:
 #   - Off: Disable blinking by default
 #   - On: Enable blinking by default
 #   - Always: Force the cursor to always blink
-#blinking: Off
+# blinking: Off
 
 # Vi mode cursor style
 #
@@ -488,7 +561,6 @@ font:
 #vi_mode_style: None
 
 # Cursor blinking interval in milliseconds.
-#blink_interval: 750
 
 # Time after which cursor stops blinking, in seconds.
 #
@@ -539,8 +611,7 @@ font:
 #triple_click: { threshold: 300 }
 
 # If this is `true`, the cursor is temporarily hidden when typing.
-#hide_when_typing: false
-
+hide_when_typing: true
 # Hints
 #
 # Terminal hints can be used to find text or hyperlink in the visible part of
@@ -630,7 +701,6 @@ font:
 # default paste binding:
 #
 # `- { key: V, mods: Control|Shift, action: Paste }`
-#
 # Each key binding will specify a:
 #
 # - `key`: Identifier of the key pressed
@@ -945,10 +1015,9 @@ font:
 #- { key: F,              mods: Command, mode: ~Search,     action: SearchForward         }
 #- { key: B,              mods: Command, mode: ~Search,     action: SearchBackward        }
 
-#debug:
+# debug:
 # Display the time it takes to redraw each frame.
-#render_timer: false
-
+# render_timer: true
 # Keep the log file after quitting Alacritty.
 #persistent_logging: false
 
