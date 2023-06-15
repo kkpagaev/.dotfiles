@@ -1,7 +1,7 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
-window:
-  # decorations: none
-  opacity: 0.94
+# window:
+# decorations: none
+# opacity: 0.94
 # Kanagawa Alacritty Colors
 # Kanagawa Alacritty Colors
 #
@@ -237,7 +237,8 @@ decorations_theme_variant: None
 font:
   size: 13.5
   normal:
-    family: JetBrainsMono Nerd Font
+    # family: JetBrainsMono Nerd Font
+    family: RobotoMono Nerd Font
     antialias: true
     style: Medium
   # bold:

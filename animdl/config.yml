@@ -3,4 +3,4 @@ fzf:
   executable: fzf
   opts: []
   state: true
-default_provider: animepahe
+default_provider: allanime
