@@ -13,8 +13,11 @@ select = "underline"
 display-messages = true
 
 [keys.normal]
-g = { b = "jump_backward"}
-K = "hover"
+g = { o = "jump_backward"}
+"C-p" = "file_picker"
+G = "goto_file_end"
+"," = { d = ":q", "." = ":w"}
+S = "hover"
 
 [keys.insert]
-j = { j = "normal_mode"}
+"C-c" = "normal_mode"
