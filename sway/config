@@ -14,7 +14,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty
+set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -24,6 +24,7 @@ include /etc/sway/config-vars.d/*
 
 exec wl-paste -t text --watch clipman store --no-persist
 
+exec wpaperd
 
 input type:keyboard {
     xkb_layout "us(dvp),ua"
@@ -57,13 +58,19 @@ bindsym $mod+shift+o exec grim -g "$(slurp -d)" - | wl-copy
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * background /home/kkpagaev/Pictures/Wallpapers/1311600.jpg fill
+# output * background /home/kkpagaev/Pictures/Wallpapers/1215002.jpg fill
 #
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
+output eDP-1 resolution 1920x1080 position 0,0
+output HDMI-A-1 resolution 1920x1080 position  1920,0
+
+# output eDP-1 resolution 1920x1080 position 1920,0
+# output HDMI-A-1 resolution 1920x1080 position  0,0
+
 
 ### Idle configuration
 #
@@ -106,22 +113,24 @@ set $brightness_down $brightness down | $onscreen_bar
     # Start a terminal
     bindsym $mod+return exec $term
 
+    bindsym $mod+shift+n exec "kitty -e notes"
+
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+semicolon kill
 
     # Start your launcher
-    bindsym $mod+c exec $menu
+    bindsym alt+space exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
     # Change normal to inverse to use left mouse button for resizing and right
     # mouse button for dragging.
-    floating_modifier $mod normal
+    floating_modifier alt normal
 
-    set $browser google-chrome
+    set $browser firefox
     # Reload the configuration file
-    bindsym $mod+Shift+c $browser
+    bindsym $mod+Shift+c exec $browser
     bindsym $mod+Shift+r reload
 
     # Exit sway (logs you out of your Wayland session)
@@ -131,31 +140,62 @@ set $brightness_down $brightness down | $onscreen_bar
     # Moving around:
     #
     
+    bindsym alt+dollar move workspace to output right
+bindsym $mod+Control+Shift+t move workspace to output left
+bindsym $mod+Control+Shift+Down move workspace to output down
+bindsym $mod+Control+Shift+Up move workspace to output up
     # Move your focus around
-    bindsym $mod+$left focus left
-    bindsym $mod+t focus down
-    bindsym $mod+$up focus up
-    bindsym $mod+$right focus right
+    bindsym alt+h exec ~/.config/sway/bin/sway-tmux left
+    # bindsym --release alt+h exec sleep 0.1
+
+    bindsym alt+a focus left
+    # bindsym alt+t focus down
+    bindsym alt+t exec ~/.config/sway/bin/sway-tmux down
+    # bindsym --release alt+t exec sleep 0.1
+    # bindsym alt+comma focus up
+    # bindsym alt+n focus right
+    bindsym alt+n exec ~/.config/sway/bin/sway-tmux right
+    # bindsym --release alt+n exec sleep 0.1
+    bindsym alt+e focus right
     # Or use $mod+[up|down|left|right]
-    bindsym $mod+Left focus left
-    bindsym $mod+Down focus down
-    bindsym $mod+Up focus up
-    bindsym $mod+Right focus right
 
     # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
-    bindsym $mod+Shift+$right move right
+    bindsym $mod+$left move left
+    bindsym $mod+$down move down
+    bindsym $mod+$up move up
+    bindsym $mod+$right move right
     # Ditto, with arrow keys
-    bindsym $mod+Shift+Left move left
-    bindsym $mod+Shift+Down move down
-    bindsym $mod+Shift+Up move up
-    bindsym $mod+Shift+Right move right
+    bindsym $mod+Left move left
+    bindsym $mod+Down move down
+    bindsym $mod+Up move up
+    bindsym $mod+Right move right
 #
 # Workspaces:
 #
     # Switch to workspace
+    bindsym $mod+ampersand workspace number 1
+    bindsym $mod+bracketleft workspace number 2
+    bindsym $mod+braceleft workspace number 3
+    bindsym $mod+braceright workspace number 4
+    bindsym $mod+parenleft workspace number 5
+    bindsym $mod+equal workspace number 6
+    bindsym $mod+asterisk workspace number 7
+    bindsym $mod+parenright workspace number 8
+    bindsym $mod+plus workspace number 9
+    bindsym $mod+bracketright workspace number 10
+    bindsym alt+tab workspace number 1
+
+
+    bindsym $mod+1 workspace number 1
+    bindsym $mod+2 workspace number 2
+    bindsym $mod+3 workspace number 3
+    bindsym $mod+4 workspace number 4
+    bindsym $mod+5 workspace number 5
+    bindsym $mod+6 workspace number 6
+    bindsym $mod+7 workspace number 7
+    bindsym $mod+8 workspace number 8
+    bindsym $mod+9 workspace number 9
+    bindsym $mod+0 workspace number 10
     
     bindsym alt+ampersand workspace number 1
     bindsym alt+bracketleft workspace number 2
@@ -163,16 +203,20 @@ set $brightness_down $brightness down | $onscreen_bar
     bindsym alt+braceright workspace number 4
     bindsym alt+parenleft workspace number 5
     bindsym alt+equal workspace number 6
+    bindsym alt+asterisk workspace number 7
+    bindsym alt+parenright workspace number 8
+    bindsym alt+plus workspace number 9
+    bindsym alt+bracketright workspace number 10
     bindsym alt+1 workspace number 1
     bindsym alt+2 workspace number 2
     bindsym alt+3 workspace number 3
     bindsym alt+4 workspace number 4
     bindsym alt+5 workspace number 5
     bindsym alt+6 workspace number 6
-    bindsym $mod+7 workspace number 7
-    bindsym $mod+8 workspace number 8
-    bindsym $mod+9 workspace number 9
-    bindsym $mod+0 workspace number 10
+    bindsym alt+7 workspace number 7
+    bindsym alt+8 workspace number 8
+    bindsym alt+9 workspace number 9
+    bindsym alt+0 workspace number 10
     # Move focused container to workspace
     bindsym $mod+Shift+ampersand move container to workspace number 1
     bindsym $mod+Shift+bracketleft move container to workspace number 2
@@ -180,6 +224,10 @@ set $brightness_down $brightness down | $onscreen_bar
     bindsym $mod+Shift+braceright move container to workspace number 4
     bindsym $mod+Shift+parenleft move container to workspace number 5
     bindsym $mod+Shift+equal move container to workspace number 6
+    bindsym $mod+Shift+asterisk move container to workspace number 7
+    bindsym $mod+Shift+parenright move container to workspace number 8
+    bindsym $mod+Shift+plus move container to workspace number 9
+    bindsym $mod+Shift+bracketright move container to workspace number 10
     bindsym $mod+Shift+7 move container to workspace number 7
     bindsym $mod+Shift+8 move container to workspace number 8
     bindsym $mod+Shift+9 move container to workspace number 9
@@ -197,7 +245,7 @@ set $brightness_down $brightness down | $onscreen_bar
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
+    bindsym $mod+shift+t layout tabbed
     bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
@@ -224,7 +272,7 @@ set $brightness_down $brightness down | $onscreen_bar
 
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
-    bindsym alt+tab scratchpad show 
+    # bindsym alt+tab scratchpad show 
 #
 # Resizing containers:
 #
@@ -233,10 +281,10 @@ mode "resize" {
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym $left resize shrink width 100px
-    bindsym $down resize grow height 100px
-    bindsym $up resize shrink height 100px
-    bindsym $right resize grow width 100px
+    bindsym e resize shrink width 100px
+    bindsym o resize grow height 100px
+    bindsym comma resize shrink height 100px
+    bindsym a resize grow width 100px
 
     # Ditto, with arrow keys
     bindsym Left resize shrink width 100px
@@ -250,21 +298,30 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-gaps inner 10
-gaps outer 10
+# gaps inner 0
+# gaps outer 1
 
 bindsym $mod+p exec --no-startup-id "hyprpicker | wl-copy", mode "default"
 
 
-default_border none
-default_floating_border none
+# default_border none
+# default_floating_border none
 font pango:monospace 0
 
 set $laptop eDP-1
 bindswitch lid:on output $laptop disable
 bindswitch lid:off output $laptop enable
 
-client.focused "#ff0000" "#ff0000" "#ff0000" "#ff0000" "#ff0000"
+# set $border "#FABD2F"
+# set $border "#76946A"
+# set $border "#54546D"
+set $border "#00B7DB"
+
+# client.focused "#54546D" "#54546D" "#54546D" "#54546D" "#54546D"
+# client.focused "#FB4934" "#54546D" "#54546D" "#FB4934" "#FB4934"
+client.focused $border "#54546D" "#54546D" $border $border
+# client.focused "#f76b1c" "#54546D" "#54546D" "#f76b1c" "#f76b1c"
+# client.focused "#E46876" "#E46876" "#E46876" "#E46876" "#E46876"
 client.focused_inactive "#23242a" "#2b2b2b" "#888888" "#000000" "#000000"
 client.unfocused "#2c2c2c" "#2b2b2b" "#888888" "#000000" "#000000"
 
@@ -277,4 +334,51 @@ bar {
     swaybar_command waybar
 }
 
+# bindgesture swipe:right workspace prev
+# bindgesture swipe:left workspace next
+
+titlebar_border_thickness 1
+titlebar_padding 1
+
+
+
+# input 1:1:AT_Translated_Set_2_keyboard {
+#
+# events disabled
+#
+# }
+
+
+smart_borders               no_gaps 
+smart_gaps                  on
+default_border 		    pixel 	1
+
+
+# bindsym $mod+h exec sway-border-tweak flash
+
+# client.focused "#23242a" "#2b2b2b" "#888888" "#000000" "#000000"
+
+# exec ~/.config/sway/bin/sway-telegram
+exec ~/.config/sway/bin/autotiling
+exec ~/.cargo/bin/wpaperd
+# exec_always autotiling
+
+# bindgesture swipe:right workspace prev
+# bindgesture swipe:left workspace next
+#     
+# # Allow container movements by pinching them
+# bindgesture pinch:inward+up move up
+# bindgesture pinch:inward+down move down
+# bindgesture pinch:inward+left move left
+# bindgesture pinch:inward+right move right
+
 include /etc/sway/config.d/*
+
+exec swaymsg "workspace 1; exec firefox;"
+exec swaymsg "workspace 8; exec firefox;"
+exec swaymsg "workspace 2; exec kitty;"
+exec swaymsg "workspace 3; exec spotify;"
+exec swaymsg "workspace 3; exec telegram-desktop;"
+
+
+

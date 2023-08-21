@@ -2,11 +2,9 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-
 if status --is-login
     set -gx PATH $PATH ~/linux/bin
 end
-
 
 function sudo --description "Replacement for Bash 'sudo !!' command to run last command using sudo."
     if test "$argv" = !!
@@ -22,42 +20,36 @@ export  PATH="$HOME/.local/bin:$PATH"
 export  PATH="/home/kkpagaev/bin:$PATH"
 export  PATH="/home/kkpagaev/go/bin:$PATH"
 export  PATH="/home/kkpagaev/.ghcup/bin:$PATH"
-# export  PATH="/home/kkpagaev/.sdkman/candidates/java/current/bin:$PATH"
-export  PATH="/home/kkpagaev/.rvm/bin:$PATH"
-export  PATH="$PATH:/home/kkpagaev/.rvm/rubies/default/bin"
-set -gx PATH "$HOME/.cargo/bin" $PATH;
 
+export FLYCTL_INSTALL="/home/kkpagaev/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
+# export DENO_INSTALL="/home/kkpagaev/.deno"
+# export PATH="$DENO_INSTALL/bin:$PATH"
+
+# export  PATH="/home/kkpagaev/.sdkman/candidates/java/current/bin:$PATH"
+# export  PATH="/home/kkpagaev/.rvm/bin:$PATH"
+# export  PATH="$PATH:/home/kkpagaev/.rvm/rubies/default/bin"
+# export PATH="$PATH:/home/kkpagaev/.local/pipx/venvs/animdl/bin/"
+
+set -gx PATH "$HOME/.cargo/bin" $PATH;
 
 export PATH="/usr/local/go/bin:$PATH"
 
-# export PATH="/home/kkpagaev/.config/emacs/bin:$PATH"
-
 export PATH="/home/kkpagaev/.local/share/nvim/mason/bin:$PATH"
-# pnpm
-set -gx PNPM_HOME "/home/kkpagaev/.local/share/pnpm"
-set -gx PATH "$PNPM_HOME" $PATH
+# set -gx PNPM_HOME "/home/kkpagaev/.local/share/pnpm"
+# set -gx PATH "$PNPM_HOME" $PATH
 set -gx PATH "/usr/local/" $PATH
-# pnpm end
-set -gx BROWSER "google-chrome-stable"
+set -gx BROWSER "firefox"
 
 bind \ct 'nvim'
 bind \cg 'g'
 
 # bind \cz 'fg'
 
-
-export PACKER_PATH="/home/kkpagaev/.local/share/nvim/site/pack/packer/start"
-
 if status --is-interactive
-        zoxide init fish | source
+    zoxide init fish | source
 end
-
-fish_add_path /home/kkpagaev/.spicetify
-
-#set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /home/kkpagaev/.ghcup/bin $PATH # ghcup-env
-#set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /home/kkpagaev/.ghcup/bin $PATH # ghcup-env
-
-#set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /home/kkpagaev/.ghcup/bin $PATH # ghcup-env
 
 set -g fish_greeting
 
@@ -82,10 +74,5 @@ fish_add_path $HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin
 
 
 # set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /home/kkpagaev/.ghcup/bin # ghcup-env
-
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
-
 
 bind \cv edit_command_buffer

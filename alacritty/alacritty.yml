@@ -1,7 +1,10 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 window:
   decorations: none
-  opacity: 0.96
+  # opacity: 0.9
+  opacity: 0.98
+  # opacity: 0.94
+  # opacity: 0.9
 # Kanagawa Alacritty Colors
 # Kanagawa Alacritty Colors
 #
@@ -45,15 +48,25 @@ window:
 # Kanagawa Alacritty Colors
 colors:
   primary:
+    # background: "0xf8ecbc"
+    # background: "0x121014"
+    # background: "0x0A0E14"
+    background: "0x1D2021"
     # background: "0x1f1f28"
-    background: "0x121014"
+    # background: "0x23272A"
+    # background: "0x282828"
+    # background: "0x232123"
+    # background: "0x1b191b"
     # background: "0x0d0b0d"
     # background: "0x0d1117"
+    # gruvbox
+    # background: "0x282828"
     # background: '0x1d2021'
     # background: '0x0a0e14'
     # background: '0x010C18'
 
-    # background: '0x2c2c2c'
+    #ybar
+    #background: '0x2c2c2c'
     # gruvbox
     # background: "0x282828"
     # background: "0x282c34"
@@ -383,16 +396,19 @@ decorations_theme_variant: None
 
 font:
   # size: 13.5
-  size: 15
+  size: 16
   normal:
-    family: JetBrainsMono Nerd Font
-    # family: RobotoMono Nerd Font
+    # family: JetBrainsMono Nerd Font
+    family: ComicMono NF
+    # family: RobotoMono NF
+    # family: RobotoMono
     # antialias: true
-    # style: Bold
+    style: Regular
   # bold:
-  #   family: RobotoMono Nerd Font
+  #   # family: JetBrainsMono Nerd Font
+  #   family: ComicMono NF
   #   antialias: true
-  #   style: Bold
+  #   style: Regular
   # italic:
   #   family: RobotoMono Nerd Font
   #   style: Medium

@@ -1,0 +1,129 @@
+#!/bin/bash
+
+terminal="kitty"
+
+
+read app_id fullscreen_mode name < <(echo $(swaymsg -t get_tree | jq -r '.. | select(.type?) | select(.focused==true) | .app_id, .fullscreen_mode, .name'))
+
+echo $app_id
+echo $name
+echo $fullscreen_mode
+
+echo $app_id >> ~/.config/sway/bin/log
+echo $name >> ~/.config/sway/bin/log
+echo $fullscreen_mode >> ~/.config/sway/bin/log
+
+if [[ $app_id == $terminal ]]; then
+  if [[ $name != "t ~" ]]; then
+    if [[ $fullscreen_mode == 1 ]]; then
+      exit 0
+    fi
+  fi
+fi
+
+
+direction=$1
+
+if [[ $name != "t ~" ]]; then
+  swaymsg -- "focus $direction"
+  exit 0
+fi
+
+echo "bar"
+
+
+session=$(tmux list-sessions | grep 'attached' | awk '{ print $1 }' | sed 's/://g' | awk '!/notes/')
+
+if [[ $fullscreen_mode == 1 ]]; then
+  if [[ $direction == "left" ]]; then
+      tmux select-pane -L -t $session
+  elif [[ $direction == "right" ]]; then
+      tmux select-pane -R -t $session
+  else
+    echo "baaaaar"
+      tmux select-pane -D -t $session
+  fi
+  exit 0
+fi
+
+
+if [[ $(swaymsg -t get_outputs -r | jq 'length') -gt 1 ]]; then
+  if [[ $direction == "left" ]]; then
+      tmux select-pane -L -t $session
+  elif [[ $direction == "right" ]]; then
+      tmux select-pane -R -t $session
+  else
+    echo "baaaaar"
+      tmux select-pane -D -t $session
+  fi
+  exit 0
+fi
+
+if [[ $(tmux display-message -p "#{pane_at_$direction}") -gt 0 ]]; then
+  if [[ $direction == "left" ]]; then
+    app_on_left=$(swaymsg -t get_tree | jq -r \
+      '.. | (.nodes? // empty)[] | select(.pid and .visible) | {app_id} + .rect | "\(.x) \(.app_id)" ' | sort | head -n 1 | awk '{ print $2 }')
+    if [[ $app_on_left == $terminal ]]; then
+      # window count in current workspace
+      count=$(swaymsg -t get_tree | jq -r \
+                       '.. | (.nodes? // empty)[] | select(.pid and .visible) | {name} + .rect
+                       | "\(.x),\(.y) \(.width)x\(.height) \(.name) \(.focused)"' | wc -l)
+      if [[ $count == 1 ]]; then
+        tmux select-pane -L -t $session
+        exit 0
+      fi
+      if [[ $(tmux display-message -p "#{pane_at_left}") -gt 0 ]]; then
+        swaymsg -- "focus left"
+      else
+        tmux select-pane -L -t $session
+      fi
+    else
+        app_on_right=$(swaymsg -t get_tree | jq -r \
+          '.. | (.nodes? // empty)[] | select(.pid and .visible) | {app_id} + .rect | "\(.x) \(.app_id)" ' | sort -n | tail -n 1 | awk '{ print $2 }')
+        echo "foo"
+        echo $app_on_right
+        if [[ $app_on_right == "google-chrome" ]]; then
+          swaymsg -- "focus right"
+        else
+          #   echo "foo"
+          # tmux select-pane -L -t $session
+          swaymsg -- "focus left"
+        fi
+    fi
+  elif [[ $direction == "right" ]]; then
+    app_on_right=$(swaymsg -t get_tree | jq -r \
+      '.. | (.nodes? // empty)[] | select(.pid and .visible) | {app_id} + .rect | "\(.x) \(.app_id)" ' | sort | tail -n 1 | awk '{ print $2 }')
+    echo $app_on_right
+
+
+    if [[ $app_on_right == $terminal ]]; then
+      window count in current workspace
+      count=$(swaymsg -t get_tree | jq -r \
+                       '.. | (.nodes? // empty)[] | select(.pid and .visible) | {name} + .rect
+                       | "\(.x),\(.y) \(.width)x\(.height) \(.name) \(.focused)"' | wc -l)
+      if [[ $count == 1 ]]; then
+        tmux select-pane -R -t $session
+        exit 0
+      fi
+      if [[ $(tmux display-message -p "#{pane_at_right}") -gt 0 ]]; then
+        swaymsg -- "focus right"
+      else
+        tmux select-pane -R -t $session
+      fi
+    else
+      swaymsg -- "focus right"
+    fi
+  else
+    tmux select-pane -D -t $session
+  fi
+else
+  if [[ $direction == "left" ]]; then
+      tmux select-pane -L -t $session
+  elif [[ $direction == "right" ]]; then
+      tmux select-pane -R -t $session
+  else
+      tmux select-pane -D -t $session
+  fi
+fi
+
+# edge pane?

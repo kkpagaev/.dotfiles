@@ -1,0 +1,918 @@
+{
+  "id": 1,
+  "type": "root",
+  "orientation": "horizontal",
+  "percent": null,
+  "urgent": false,
+  "marks": [],
+  "focused": false,
+  "layout": "splith",
+  "border": "none",
+  "current_border_width": 0,
+  "rect": {
+    "x": 1920,
+    "y": 0,
+    "width": 1920,
+    "height": 1080
+  },
+  "deco_rect": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0
+  },
+  "window_rect": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0
+  },
+  "geometry": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0
+  },
+  "name": "root",
+  "window": null,
+  "nodes": [
+    {
+      "id": 2147483647,
+      "type": "output",
+      "orientation": "horizontal",
+      "percent": null,
+      "urgent": false,
+      "marks": [],
+      "focused": false,
+      "layout": "output",
+      "border": "none",
+      "current_border_width": 0,
+      "rect": {
+        "x": 1920,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "deco_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "window_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "geometry": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "name": "__i3",
+      "window": null,
+      "nodes": [
+        {
+          "id": 2147483646,
+          "type": "workspace",
+          "orientation": "horizontal",
+          "percent": null,
+          "urgent": false,
+          "marks": [],
+          "focused": false,
+          "layout": "splith",
+          "border": "none",
+          "current_border_width": 0,
+          "rect": {
+            "x": 1920,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "deco_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "window_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "name": "__i3_scratch",
+          "window": null,
+          "nodes": [],
+          "floating_nodes": [],
+          "focus": [],
+          "fullscreen_mode": 1,
+          "sticky": false
+        }
+      ],
+      "floating_nodes": [],
+      "focus": [
+        2147483646
+      ],
+      "fullscreen_mode": 0,
+      "sticky": false
+    },
+    {
+      "id": 5,
+      "type": "output",
+      "orientation": "none",
+      "percent": 1,
+      "urgent": false,
+      "marks": [],
+      "focused": false,
+      "layout": "output",
+      "border": "none",
+      "current_border_width": 0,
+      "rect": {
+        "x": 1920,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "deco_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "window_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "geometry": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "name": "HDMI-A-1",
+      "window": null,
+      "nodes": [
+        {
+          "id": 7,
+          "type": "workspace",
+          "orientation": "horizontal",
+          "percent": null,
+          "urgent": false,
+          "marks": [],
+          "focused": false,
+          "layout": "splith",
+          "border": "none",
+          "current_border_width": 0,
+          "rect": {
+            "x": 1920,
+            "y": 0,
+            "width": 1920,
+            "height": 1056
+          },
+          "deco_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "window_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "name": "1",
+          "window": null,
+          "nodes": [
+            {
+              "id": 18,
+              "type": "con",
+              "orientation": "horizontal",
+              "percent": 1,
+              "urgent": false,
+              "marks": [],
+              "focused": false,
+              "layout": "splith",
+              "border": "none",
+              "current_border_width": 0,
+              "rect": {
+                "x": 1920,
+                "y": 0,
+                "width": 1920,
+                "height": 1056
+              },
+              "deco_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "window_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "geometry": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "name": null,
+              "window": null,
+              "nodes": [
+                {
+                  "id": 24,
+                  "type": "con",
+                  "orientation": "horizontal",
+                  "percent": 1,
+                  "urgent": false,
+                  "marks": [],
+                  "focused": false,
+                  "layout": "splith",
+                  "border": "none",
+                  "current_border_width": 0,
+                  "rect": {
+                    "x": 1920,
+                    "y": 0,
+                    "width": 1920,
+                    "height": 1056
+                  },
+                  "deco_rect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0,
+                    "height": 0
+                  },
+                  "window_rect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0,
+                    "height": 0
+                  },
+                  "geometry": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0,
+                    "height": 0
+                  },
+                  "name": null,
+                  "window": null,
+                  "nodes": [
+                    {
+                      "id": 9,
+                      "type": "con",
+                      "orientation": "none",
+                      "percent": 1,
+                      "urgent": false,
+                      "marks": [],
+                      "focused": false,
+                      "layout": "none",
+                      "border": "pixel",
+                      "current_border_width": 1,
+                      "rect": {
+                        "x": 1920,
+                        "y": 0,
+                        "width": 1920,
+                        "height": 1056
+                      },
+                      "deco_rect": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 0,
+                        "height": 0
+                      },
+                      "window_rect": {
+                        "x": 0,
+                        "y": 1,
+                        "width": 1920,
+                        "height": 1056
+                      },
+                      "geometry": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 1972,
+                        "height": 1132
+                      },
+                      "name": "Get Window Class/Role/Title in sway : swaywm — Mozilla Firefox",
+                      "window": null,
+                      "nodes": [],
+                      "floating_nodes": [],
+                      "focus": [],
+                      "fullscreen_mode": 0,
+                      "sticky": false,
+                      "pid": 138870,
+                      "app_id": "firefox",
+                      "visible": false,
+                      "max_render_time": 0,
+                      "shell": "xdg_shell",
+                      "inhibit_idle": false,
+                      "idle_inhibitors": {
+                        "user": "none",
+                        "application": "none"
+                      }
+                    }
+                  ],
+                  "floating_nodes": [],
+                  "focus": [
+                    9
+                  ],
+                  "fullscreen_mode": 0,
+                  "sticky": false
+                }
+              ],
+              "floating_nodes": [],
+              "focus": [
+                24
+              ],
+              "fullscreen_mode": 0,
+              "sticky": false
+            }
+          ],
+          "floating_nodes": [],
+          "focus": [
+            18
+          ],
+          "fullscreen_mode": 1,
+          "sticky": false,
+          "num": 1,
+          "output": "HDMI-A-1",
+          "representation": "H[H[H[firefox]]]"
+        },
+        {
+          "id": 10,
+          "type": "workspace",
+          "orientation": "horizontal",
+          "percent": null,
+          "urgent": false,
+          "marks": [],
+          "focused": false,
+          "layout": "splith",
+          "border": "none",
+          "current_border_width": 0,
+          "rect": {
+            "x": 1920,
+            "y": 0,
+            "width": 1920,
+            "height": 1056
+          },
+          "deco_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "window_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "name": "2",
+          "window": null,
+          "nodes": [
+            {
+              "id": 11,
+              "type": "con",
+              "orientation": "none",
+              "percent": 1,
+              "urgent": false,
+              "marks": [],
+              "focused": true,
+              "layout": "none",
+              "border": "pixel",
+              "current_border_width": 1,
+              "rect": {
+                "x": 1920,
+                "y": 0,
+                "width": 1920,
+                "height": 1056
+              },
+              "deco_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "window_rect": {
+                "x": 0,
+                "y": 1,
+                "width": 1920,
+                "height": 1056
+              },
+              "geometry": {
+                "x": 0,
+                "y": 0,
+                "width": 800,
+                "height": 600
+              },
+              "name": "t ~",
+              "window": null,
+              "nodes": [],
+              "floating_nodes": [],
+              "focus": [],
+              "fullscreen_mode": 0,
+              "sticky": false,
+              "pid": 139598,
+              "app_id": "Alacritty",
+              "visible": true,
+              "max_render_time": 0,
+              "shell": "xdg_shell",
+              "inhibit_idle": false,
+              "idle_inhibitors": {
+                "user": "none",
+                "application": "none"
+              }
+            }
+          ],
+          "floating_nodes": [],
+          "focus": [
+            11
+          ],
+          "fullscreen_mode": 1,
+          "sticky": false,
+          "num": 2,
+          "output": "HDMI-A-1",
+          "representation": "H[Alacritty]"
+        },
+        {
+          "id": 12,
+          "type": "workspace",
+          "orientation": "horizontal",
+          "percent": null,
+          "urgent": false,
+          "marks": [],
+          "focused": false,
+          "layout": "splith",
+          "border": "none",
+          "current_border_width": 0,
+          "rect": {
+            "x": 1920,
+            "y": 0,
+            "width": 1920,
+            "height": 1056
+          },
+          "deco_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "window_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "name": "3",
+          "window": null,
+          "nodes": [
+            {
+              "id": 25,
+              "type": "con",
+              "orientation": "vertical",
+              "percent": 0.5,
+              "urgent": false,
+              "marks": [],
+              "focused": false,
+              "layout": "splitv",
+              "border": "none",
+              "current_border_width": 0,
+              "rect": {
+                "x": 1920,
+                "y": 0,
+                "width": 960,
+                "height": 1056
+              },
+              "deco_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "window_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "geometry": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "name": null,
+              "window": null,
+              "nodes": [
+                {
+                  "id": 13,
+                  "type": "con",
+                  "orientation": "none",
+                  "percent": 1,
+                  "urgent": false,
+                  "marks": [],
+                  "focused": false,
+                  "layout": "none",
+                  "border": "pixel",
+                  "current_border_width": 1,
+                  "rect": {
+                    "x": 1920,
+                    "y": 0,
+                    "width": 960,
+                    "height": 1056
+                  },
+                  "deco_rect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0,
+                    "height": 0
+                  },
+                  "window_rect": {
+                    "x": 1,
+                    "y": 1,
+                    "width": 958,
+                    "height": 1054
+                  },
+                  "geometry": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 958,
+                    "height": 1054
+                  },
+                  "name": "Skład Yuõbisch – (38284)",
+                  "window": null,
+                  "nodes": [],
+                  "floating_nodes": [],
+                  "focus": [],
+                  "fullscreen_mode": 0,
+                  "sticky": false,
+                  "pid": 139739,
+                  "app_id": "telegram-desktop_telegram-desktop",
+                  "visible": false,
+                  "max_render_time": 0,
+                  "shell": "xdg_shell",
+                  "inhibit_idle": false,
+                  "idle_inhibitors": {
+                    "user": "none",
+                    "application": "none"
+                  }
+                }
+              ],
+              "floating_nodes": [],
+              "focus": [
+                13
+              ],
+              "fullscreen_mode": 0,
+              "sticky": false
+            },
+            {
+              "id": 15,
+              "type": "con",
+              "orientation": "vertical",
+              "percent": 0.5,
+              "urgent": false,
+              "marks": [],
+              "focused": false,
+              "layout": "splitv",
+              "border": "none",
+              "current_border_width": 0,
+              "rect": {
+                "x": 2880,
+                "y": 0,
+                "width": 960,
+                "height": 1056
+              },
+              "deco_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "window_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "geometry": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "name": null,
+              "window": null,
+              "nodes": [
+                {
+                  "id": 14,
+                  "type": "con",
+                  "orientation": "none",
+                  "percent": 1,
+                  "urgent": false,
+                  "marks": [],
+                  "focused": false,
+                  "layout": "none",
+                  "border": "pixel",
+                  "current_border_width": 1,
+                  "rect": {
+                    "x": 2880,
+                    "y": 0,
+                    "width": 960,
+                    "height": 1056
+                  },
+                  "deco_rect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0,
+                    "height": 0
+                  },
+                  "window_rect": {
+                    "x": 1,
+                    "y": 1,
+                    "width": 958,
+                    "height": 1054
+                  },
+                  "geometry": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 958,
+                    "height": 1054
+                  },
+                  "name": "Spotify",
+                  "window": 4194307,
+                  "nodes": [],
+                  "floating_nodes": [],
+                  "focus": [],
+                  "fullscreen_mode": 0,
+                  "sticky": false,
+                  "pid": 140036,
+                  "app_id": null,
+                  "visible": false,
+                  "max_render_time": 0,
+                  "shell": "xwayland",
+                  "inhibit_idle": false,
+                  "idle_inhibitors": {
+                    "user": "none",
+                    "application": "none"
+                  },
+                  "window_properties": {
+                    "class": "Spotify",
+                    "instance": "spotify",
+                    "title": "Spotify",
+                    "transient_for": null,
+                    "window_type": "normal"
+                  }
+                }
+              ],
+              "floating_nodes": [],
+              "focus": [
+                14
+              ],
+              "fullscreen_mode": 0,
+              "sticky": false
+            }
+          ],
+          "floating_nodes": [],
+          "focus": [
+            25,
+            15
+          ],
+          "fullscreen_mode": 1,
+          "sticky": false,
+          "num": 3,
+          "output": "HDMI-A-1",
+          "representation": "H[V[telegram-desktop_telegram-desktop] V[Spotify]]"
+        }
+      ],
+      "floating_nodes": [],
+      "focus": [
+        10,
+        7,
+        12
+      ],
+      "fullscreen_mode": 0,
+      "sticky": false,
+      "active": true,
+      "dpms": true,
+      "primary": false,
+      "make": "Philips Consumer Electronics Company",
+      "model": "PHL 243V5",
+      "serial": "ZV01628007506",
+      "scale": 1,
+      "scale_filter": "nearest",
+      "transform": "normal",
+      "adaptive_sync_status": "disabled",
+      "current_workspace": "2",
+      "modes": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "refresh": 60000
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "refresh": 60000
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "refresh": 59940
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "refresh": 50000
+        },
+        {
+          "width": 1680,
+          "height": 1050,
+          "refresh": 59883
+        },
+        {
+          "width": 1280,
+          "height": 1024,
+          "refresh": 75025
+        },
+        {
+          "width": 1280,
+          "height": 1024,
+          "refresh": 60020
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "refresh": 74984
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "refresh": 59901
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "refresh": 60000
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "refresh": 60000
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "refresh": 60000
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "refresh": 59940
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "refresh": 50000
+        },
+        {
+          "width": 1024,
+          "height": 768,
+          "refresh": 75029
+        },
+        {
+          "width": 1024,
+          "height": 768,
+          "refresh": 60004
+        },
+        {
+          "width": 800,
+          "height": 600,
+          "refresh": 75000
+        },
+        {
+          "width": 800,
+          "height": 600,
+          "refresh": 60317
+        },
+        {
+          "width": 720,
+          "height": 576,
+          "refresh": 50000
+        },
+        {
+          "width": 720,
+          "height": 576,
+          "refresh": 50000
+        },
+        {
+          "width": 720,
+          "height": 576,
+          "refresh": 50000
+        },
+        {
+          "width": 720,
+          "height": 480,
+          "refresh": 60000
+        },
+        {
+          "width": 720,
+          "height": 480,
+          "refresh": 60000
+        },
+        {
+          "width": 720,
+          "height": 480,
+          "refresh": 59940
+        },
+        {
+          "width": 720,
+          "height": 480,
+          "refresh": 59940
+        },
+        {
+          "width": 720,
+          "height": 480,
+          "refresh": 59940
+        },
+        {
+          "width": 640,
+          "height": 480,
+          "refresh": 75000
+        },
+        {
+          "width": 640,
+          "height": 480,
+          "refresh": 72809
+        },
+        {
+          "width": 640,
+          "height": 480,
+          "refresh": 66667
+        },
+        {
+          "width": 640,
+          "height": 480,
+          "refresh": 60000
+        },
+        {
+          "width": 640,
+          "height": 480,
+          "refresh": 59940
+        },
+        {
+          "width": 640,
+          "height": 480,
+          "refresh": 59940
+        },
+        {
+          "width": 720,
+          "height": 400,
+          "refresh": 70082
+        }
+      ],
+      "current_mode": {
+        "width": 1920,
+        "height": 1080,
+        "refresh": 60000
+      },
+      "max_render_time": 0
+    }
+  ],
+  "floating_nodes": [],
+  "focus": [
+    5
+  ],
+  "fullscreen_mode": 0,
+  "sticky": false
+}

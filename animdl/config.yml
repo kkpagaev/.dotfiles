@@ -1,7 +1,0 @@
-# default_player: vlc
-fzf:
-  executable: fzf
-  opts: []
-  state: true
-# default_provider: allanime
-default_provider: animepahe
