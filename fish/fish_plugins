@@ -1,9 +1,4 @@
 jorgebucaran/fisher
-reitzig/sdkman-for-fish@v1.4.0
-jorgebucaran/fish-nvm
 jorgebucaran/nvm.fish
-jorgebucaran/autopair.fish
-nickeb96/puffer-fish
-acomagu/fish-async-prompt
-jorgebucaran/hydro
 patrickf1/fzf.fish
+jorgebucaran/autopair.fish

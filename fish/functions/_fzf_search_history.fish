@@ -12,19 +12,19 @@ function _fzf_search_history --description "Search command history. Replace the 
 
     # Delinate commands throughout pipeline using null rather than newlines because commands can be multi-line
     set -f commands_selected (
-        builtin history --null --show-time="$fzf_history_time_format │ " |
+        builtin history --null |
         _fzf_wrapper --read0 \
             --print0 \
             --multi \
-            --tiebreak=index \
+            --scheme=history \
             --prompt="Search History> " \
             --query=(commandline) \
             --preview="echo -- {} | string replace --regex '^.*? │ ' '' | fish_indent --ansi" \
-            --preview-window="bottom:3:wrap" \
-            $fzf_history_opts |
-        string split0 |
+            --preview-window="right:65:wrap" \
+            $fzf_history_opts 
+        # string split0 |
         # remove timestamps from commands selected
-        string replace --regex '^.*? │ ' ''
+        # string replace --regex '^.*? │ ' ''
     )
 
     if test $status -eq 0
