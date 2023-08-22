@@ -20,7 +20,7 @@ function _fzf_search_history --description "Search command history. Replace the 
             --prompt="Search History> " \
             --query=(commandline) \
             --preview="echo -- {} | string replace --regex '^.*? │ ' '' | fish_indent --ansi" \
-            --preview-window="right:65:wrap" \
+            --preview-window="right:wrap" \
             $fzf_history_opts 
         # string split0 |
         # remove timestamps from commands selected
