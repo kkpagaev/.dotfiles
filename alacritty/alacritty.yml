@@ -400,10 +400,11 @@ font:
   normal:
     # family: JetBrainsMono Nerd Font
     family: ComicMono NF
+    # family: Minecraft
     # family: RobotoMono NF
     # family: RobotoMono
     # antialias: true
-    style: Regular
+    # style: Regular
   # bold:
   #   # family: JetBrainsMono Nerd Font
   #   family: ComicMono NF
@@ -424,13 +425,15 @@ font:
 #     family: RobotoMono Nerd Font
 #     antialias: true
 #     style: Medium
-#   bold:
-#     family: RobotoMono Nerd Font
-#     antialias: true
+  bold:
+    family: ComicMono NF
+    style: Regular
+    antialias: true
 #     style: Bold
-#   italic:
-#     family: RobotoMono Nerd Font
-#     style: Medium
+  italic:
+    # family: RobotoMono Nerd Font
+    family: ComicMono NF
+    style: Regular
 #     antialias: true
 #   bold_italic:
 #     family: RobotoMono Nerd Font
