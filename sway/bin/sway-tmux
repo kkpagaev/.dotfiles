@@ -9,10 +9,6 @@ echo $app_id
 echo $name
 echo $fullscreen_mode
 
-echo $app_id >> ~/.config/sway/bin/log
-echo $name >> ~/.config/sway/bin/log
-echo $fullscreen_mode >> ~/.config/sway/bin/log
-
 if [[ $app_id == $terminal ]]; then
   if [[ $name != "t ~" ]]; then
     if [[ $fullscreen_mode == 1 ]]; then
