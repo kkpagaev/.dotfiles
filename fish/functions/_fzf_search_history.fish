@@ -12,16 +12,47 @@ function _fzf_search_history --description "Search command history. Replace the 
 
     # Delinate commands throughout pipeline using null rather than newlines because commands can be multi-line
     set -f commands_selected (
-        builtin history --null |
-        _fzf_wrapper --read0 \
-            --print0 \
-            --multi \
-            --scheme=history \
-            --prompt="Search History> " \
-            --query=(commandline) \
-            --preview="echo -- {} | string replace --regex '^.*? │ ' '' | fish_indent --ansi" \
-            --preview-window="right:wrap" \
-            $fzf_history_opts 
+        set prompt $(commandline -b | head -n 1)
+        switch $prompt
+          case "cu*" 
+          builtin history --null -p "curl" |
+            _fzf_wrapper --read0 \
+                --print0 \
+                --multi \
+                --scheme=history \
+                --prompt="CURL> " \
+                --query=(commandline) \
+                --preview="echo -- {} | string replace --regex '^.*? │ ' '' | fish_indent --ansi" \
+                --preview-window="right:wrap" \
+                $fzf_history_opts 
+
+          case '*'
+            builtin history --null |
+                _fzf_wrapper --read0 \
+                    --print0 \
+                    --multi \
+                    --scheme=history \
+                    --prompt="Search History> " \
+                    --query=(commandline) \
+                    --preview="echo -- {} | string replace --regex '^.*? │ ' '' | fish_indent --ansi" \
+                    --preview-window="right:wrap" \
+                    $fzf_history_opts 
+        end
+
+        # if string match  "curl"
+        #   echo "foo"
+        # else
+          # _fzf_wrapper --read0 \
+          #     --print0 \
+          #     --multi \
+          #     --scheme=history \
+          #     --prompt="Search History> " \
+          #     --query=(commandline) \
+          #     --preview="echo -- {} | string replace --regex '^.*? │ ' '' | fish_indent --ansi" \
+          #     --preview-window="right:wrap" \
+          #     $fzf_history_opts 
+        # end
+
         # string split0 |
         # remove timestamps from commands selected
         # string replace --regex '^.*? │ ' ''
