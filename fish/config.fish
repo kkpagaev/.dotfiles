@@ -26,6 +26,8 @@ export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
 set -gx PATH "$HOME/.cargo/bin" $PATH;
 
+set -gx PATH "$HOME/.cargo/env" $PATH
+
 export PATH="/usr/local/go/bin:$PATH"
 
 export PATH="/home/kkpagaev/.local/share/nvim/mason/bin:$PATH"
