@@ -1,7 +1,5 @@
  #vim:ft=kitty
-# background_opacity 0.9
-map ctrl+plus change_font_size all +2.0
-map ctrl+minus change_font_size all -2.0
+# background_opacity 0.90
 # background_opacity 1 
 ## name: Kanagawa
 ## license: MIT
@@ -32,15 +30,15 @@ map ctrl+minus change_font_size all -2.0
 
 # background #1D2021
 # nice
-# background #101113
+background #101113
 # gruv
 # background #1C1F20
 # background #0f111b
 # background #0a0a0a
-# foreground #DCD7BA
-# selection_background #2D4F67
-# selection_foreground #C8C093
-# url_color #72A7BC
+foreground #DCD7BA
+selection_background #2D4F67
+selection_foreground #C8C093
+url_color #72A7BC
 # cursor #C8C093
 
 # Tabs
@@ -49,34 +47,36 @@ map ctrl+minus change_font_size all -2.0
 #inactive_tab_background  #1F1F28
 #inactive_tab_foreground #727169
 #tab_bar_background #15161E
-# active_tab_background #141414141414
-# active_tab_foreground #C8C093
-# inactive_tab_background #141414141414 
-# inactive_tab_foreground #727169
+
+
+active_tab_background #141414141414
+active_tab_foreground #C8C093
+inactive_tab_background #141414141414 
+inactive_tab_foreground #727169
 # normal
-# color0 #090618
-# color1 #C34043
-# color2 #76946A
-# color3 #C0A36E
-# color4 #7E9CD8
-# color5 #957FB8
-# color6 #6A9589
-# color7 #C8C093
+color0 #090618
+color1 #C34043
+color2 #76946A
+color3 #C0A36E
+color4 #7E9CD8
+color5 #957FB8
+color6 #6A9589
+color7 #C8C093
 
 # bright
-# color8  #727169
-# color9  #E82424
-# color10 #98BB6C
-# color11 #E6C384
-# color12 #7FB4CA
-# color13 #938AA9
-# color14 #7AA89F
-# color15 #DCD7BA
+color8  #727169
+color9  #E82424
+color10 #98BB6C
+color11 #E6C384
+color12 #7FB4CA
+color13 #938AA9
+color14 #7AA89F
+color15 #DCD7BA
 
 
 # extended colors
-# color16 #FFA066
-# color17 #FF5D62
+color16 #FFA066
+color17 #FF5D62
   
 
 
@@ -1563,6 +1563,6 @@ macos_traditional_fullscreen no
 
 
 # BEGIN_KITTY_THEME
-# kanagawabones
+# Rosé Pine
 include current-theme.conf
 # END_KITTY_THEME
