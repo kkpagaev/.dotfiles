@@ -20,7 +20,7 @@ set $right l
 
 set $term kitty
 set $menu wofi --show run
-set $wallpaper /home/kkpagaev/Pictures/wallpapers/star.png
+set $wallpaper /home/kkpagaev/Pictures/wallpapers/nisekoi1.jpg
 
 
 bindsym alt+space exec "ulauncher"
@@ -254,7 +254,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod+p exec --no-startup-id "hyprpicker | wl-copy", mode "default"
 
 
-font pango:monospace 1
+# font pango:monospace 1
 
 set $laptop eDP-1
 bindswitch lid:on output $laptop disable
