@@ -27,7 +27,7 @@ function _jq_complete
   return $result
 end
 
-bind --mode insert \cj _jq_complete
-bind --mode default \cj _jq_complete
+# bind --mode insert \cj _jq_complete
+# bind --mode default \cj _jq_complete
 
 fish_add_path $__fish_config_dir/conf.d/jq_repl_bin

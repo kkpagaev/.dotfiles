@@ -8,16 +8,20 @@ end
 
 function fish_prompt
   set -l last_status $status
-  set -l purple (set_color -o B294BB)
-  set -l white (set_color -o FFFFFF)
-  set -l primary (set_color -o 282D3C)
-  set -l cyan (set_color -o 8BE9FD)
-  set -l yellow (set_color -o E6DB74)
-  set -l red (set_color -o CC6666)
-  set -l blue (set_color -o 66D9EF)
-  set -l green (set_color -o 00C853)
-  set -l orange (set_color -o FFB74D)
-  set -l normal (set_color normal)
+  # Nier Automata inspired palette
+  set -l fg      (set_color normal)
+  set -l white   (set_color white)
+  set -l accent  (set_color cyan)
+  set -l faded   (set_color brblack)
+  set -l yellow  (set_color yellow)
+  set -l red     (set_color red)
+  set -l blue    (set_color blue)
+  set -l green   (set_color green)
+  set -l magenta (set_color magenta)
+  set -l cyan    (set_color cyan)
+  set -l orange  (set_color bryellow)
+  set -l normal  (set_color normal)
+
 
   if test $last_status = 0
       set status_indicator "$white➜ "

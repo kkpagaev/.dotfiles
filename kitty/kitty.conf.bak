@@ -1,5 +1,5 @@
  #vim:ft=kitty
-# background_opacity 0.9
+# background_opacity 0.95
 map ctrl+tab no_op
 map ctrl+shift+tab no_op
 
@@ -26,7 +26,7 @@ map ctrl+minus change_font_size all -2.0
 
 # background #1c1c26
 
-## background #1F1F28
+ # background #1F1F28
 # background #0d1117
 # background #0d1117
 # kanagawa
@@ -97,9 +97,9 @@ map ctrl+minus change_font_size all -2.0
 # family: RobotoMono
 
 # font_family JetBrainsMono Nerd Font
-font_family Comic Mono
+# font_family あずきフォント
 # font_family ComicShannsMono Nerd Font
-# bold_font Comic Mono
+font_family Comic Mono
 # bold_font        auto
 # italic_font      auto
 # bold_italic_font auto
@@ -120,7 +120,7 @@ font_size 21
 
 #: Font size (in pts)
 
-# force_ltr no
+force_ltr no
 
 #: kitty does not support BIDI (bidirectional text), however, for RTL
 #: scripts, words are automatically displayed in RTL. That is to say,
@@ -591,9 +591,9 @@ enable_audio_bell no
 
 #: Window layout {{{
 
-# remember_window_size  yes
-# initial_window_width  640
-# initial_window_height 400
+remember_window_size  yes
+initial_window_width  940
+initial_window_height 700
 
 #: If enabled, the window size will be remembered so that new
 #: instances of kitty will have the same size as the previous
@@ -1565,7 +1565,12 @@ macos_traditional_fullscreen no
 #: }}}
 
 
+# include themes/default.conf
+include themes/nier.conf
+# include themes/kikisen.conf
+
+
 # BEGIN_KITTY_THEME
-# vimbones
+# Nier
 include current-theme.conf
 # END_KITTY_THEME

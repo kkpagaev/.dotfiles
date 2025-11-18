@@ -47,3 +47,6 @@ color14 #2B747C
 color7  #2C363C
 color15 #4F5E68
 # You can set the remaining 240 colors as color16 to color255.
+
+include nier_automata.conf
+

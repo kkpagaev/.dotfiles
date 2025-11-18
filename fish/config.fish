@@ -17,6 +17,7 @@ end
 . ~/.bash_aliases
 
 export  PATH="$HOME/.local/bin:$PATH"
+export  PATH="$HOME/.cargo/bin:$PATH"
 export  PATH="/home/kkpagaev/bin:$PATH"
 export  PATH="/home/kkpagaev/go/bin:$PATH"
 export  PATH="/home/kkpagaev/.ghcup/bin:$PATH"
@@ -27,7 +28,7 @@ export PATH="/home/kkpagaev/.local/share/solana/install/active_release/bin:$PATH
 
 
 set -gx PATH "/usr/local/" $PATH
-set -gx BROWSER "firefox"
+set -gx BROWSER "zen-browser"
 
 if status --is-interactive
     zoxide init fish | source
@@ -43,9 +44,18 @@ function bang  --description "Replacement for Bash 'sudo !!' command to run last
     eval command $history[1]
 end
 
-fish_add_path $HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin
-
 bind \cv edit_command_buffer
 
 bind \ct 'nvim'
 bind \cg 'g'
+
+export FLYCTL_INSTALL="/home/kkpagaev/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
+
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /home/kkpagaev/.ghcup/bin $PATH # ghcup-env
+
+~/.local/bin/mise activate fish | source
+
+# eval "$(rbenv init -)"
+
