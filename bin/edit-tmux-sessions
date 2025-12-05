@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+sessions=$(tmux list-sessions -F '#S' | grep "^[0-9]\+")
+
+tmp=$(mktemp)
+echo -e "$sessions" > $tmp
+
+vim $tmp
+
+reordered_sessions=$(cat $tmp)
+
+counter=1
+for session in $reordered_sessions; do
+  first_char="${session:0:1}"
+
+  if ! [[ $first_char == "$counter" ]]; then
+    tmux rename-session -t $session "$counter${session:1}"
+  fi
+
+  ((counter++))
+done
+
+rm $tmp

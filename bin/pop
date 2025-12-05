@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+list=$(tmux list-sessions -F '#S')
+
+first_arg=$1
+
+selected=$(echo "$list" | awk "NR==$first_arg {print}")
+
+tmux switch -t $selected

@@ -1,5 +1,8 @@
 *
 !tmux/
 !fish/
-!.bash_aliases
 !bin/
+!.bash_aliases
+!*/
+nvim/
+bin/deployed_rev
