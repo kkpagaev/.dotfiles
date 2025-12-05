@@ -6,26 +6,11 @@ if status --is-login
     set -gx PATH $PATH ~/linux/bin
 end
 
-function sudo --description "Replacement for Bash 'sudo !!' command to run last command using sudo."
-    if test "$argv" = !!
-        echo sudo $history[1]
-        eval command sudo $history[1]
-    else
-        command sudo $argv
-    end
-end
-. ~/.bash_aliases
+. ~/.config/.bash_aliases
 
 export  PATH="$HOME/.local/bin:$PATH"
 export  PATH="$HOME/.cargo/bin:$PATH"
-export  PATH="/home/kkpagaev/bin:$PATH"
-export  PATH="/home/kkpagaev/go/bin:$PATH"
-export  PATH="/home/kkpagaev/.ghcup/bin:$PATH"
-export GO111MODULE="on"
-export PATH="/usr/local/go/bin:$PATH"
-
-export PATH="/home/kkpagaev/.local/share/solana/install/active_release/bin:$PATH"
-
+export  PATH="$HOME/.config/bin:$PATH"
 
 set -gx PATH "/usr/local/" $PATH
 set -gx BROWSER "zen-browser"
